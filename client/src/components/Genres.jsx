@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 class Genre extends Component{
-  /* State */
   state = {}
 
   render(){
