@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+/* Connection to Mongo */
 connectToMongo = async() => {
 	try{
 		await mongoose.connect('mongodb://localhost/vidly');
