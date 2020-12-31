@@ -4,7 +4,7 @@ To install MongoDB in Mac
 2. brew install mongodb.
 3. To verify mongo --version.
 4. sudo chown -R anoop /System/Volumes/Data/data/db (// for OS Catalina the default storage path for mongo is /System/Volumes/Data/data/db)
-5. mongod --dbpath /System/Volumes/Data/data/db
+5. mongod -dbpath /System/Volumes/Data/data/db
 
 To install robomongo or robo3T with mongod running
 
