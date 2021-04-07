@@ -41,7 +41,7 @@ router.put('/:id', async(req, res, next) => {
 		return;
 	}
 
-  const movie = await Movie.findByIdAndUpdate({
+  const movie = await Movie.findByIdAndUpdate(req.params.id, {
   	title: req.body.title,
 	  genre: genreId,
 	  numberInStock: req.body.numberInStock,

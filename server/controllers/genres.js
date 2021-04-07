@@ -1,6 +1,7 @@
 const express = require('express');
+const auth = require('../middleware/auth');
 const router = express.Router();
-const Genre = require("../models/genre");
+const { Genre } = require('../models/genre');
 
 router.get('/', async(req, res) => {
   const genres = await Genre.find();
@@ -17,7 +18,7 @@ router.get('/:id', async(req, res) => {
   else res.send(genre.name);
 });
 
-router.post('/', async(req, res) => {
+router.post('/', auth, async(req, res) => {
   const genre = new Genre({
     name: req.body.name
   });
